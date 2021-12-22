@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TrackMyBus</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.7">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPyrZwhLyYzo8C4UzZddq7uEhY5gLJhAs&callback=&libraries=&v=weekly"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
+  </head>
+  <body>
+    <div id=heading>
+      <h1>My Scarsdale School Bus</h1>
+    </div>
+    <div id="busID">
+      <h3>Student's School Bus Number:</h3>
+      <input id="busNumber" type="text" maxlength="3"/>
+      <button id="busNumberSubmit" onclick="selectBusNumber()">Submit</button>
+    </div>
+
+    <div id="menu-bar">
+      <button id="menu-collapse" onclick="showMenuBar()">
+        <span id="menu-icon"></span>
+        <span id="menu-icon"></span>
+        <span id="menu-icon"></span>
+        <img src="schoolbus.png">
+      </button>
+      <ul id="menu-items">
+        <li><b><u>Home</u></b></li>
+        <a href="/reservation/login"><li>Bus Reservations</li></a>
+        <a href="/busdriver/login"><li>Bus Driver Login</li></a>
+        <a href="/weather"><li>Scarsdale Weather</li></a>
+      </ul>
+    </div>
+    <div id="map"></div>
+  </body>
+  <script src="./client.js"></script>
+</html>

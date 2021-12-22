@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.7">
+  <script src="/socket.io/socket.io.js"></script>
+  <link rel="stylesheet" type="text/css" href="busDriverStyle.css">
+  <title>TrackMyBus</title>
+</head>
+<body>
+  <div id="busID">
+    <h3>School Bus Number:</h6>
+    <input id="busNumber" type="text" maxlength="3"/>
+    <button id="busNumberSubmit" onclick="confirmBusNumber()">Submit</button>
+  </div>
+
+  <div id="menu-bar">
+    <button id="menu-collapse" onclick="showMenuBar()">
+      <span id="menu-icon"></span>
+      <span id="menu-icon"></span>
+      <span id="menu-icon"></span>
+    </button>
+    <ul id="menu-items">
+      <a href="/"><li>Home</li></a>
+      <a href="/reservation/login"><li>Bus Reservations</li></a>
+      <li><b><u>Bus Driver Login</u></b></li>
+      <a href="/weather"><li>Scarsdale Weather</li></a>
+    </ul>
+  </div>
+
+  <div id="numberPeople">
+    <h3>Use the counter to track the number of students on the bus.</h3>
+    <button id="addPeople" onclick="addPeople()">+</button>
+    <h2>0</h2>
+    <button id="subtractPeople" onclick="subtractPeople()">-</button>
+  </div>  
+</body>
+<script src="./busDriverClient.js"></script>
+</html>

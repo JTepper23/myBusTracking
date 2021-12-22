@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.7">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/reservationNew.js"></script>
+  <link rel="stylesheet" type="text/css" href="/reservationNewStyle.css"/>
+  <title>Reserve A Spot</title>
+</head>
+<body>
+  <div id="menu-bar">
+    <button id="menu-collapse" onclick="showMenuBar()">
+      <span id="menu-icon"></span>
+      <span id="menu-icon"></span>
+      <span id="menu-icon"></span>
+    </button>
+    <ul id="menu-items">
+      <a href="/"><li>Home</li></a>
+      <li><b><u>Bus Reservations</u></b></li>
+      <a href="/busdriver/login"><li>Bus Driver Login</li></a>
+      <a href="/weather"><li>Scarsdale Weather</li></a>
+    </ul>
+  </div>
+
+  <div id="newReservation">
+    <h2>New Reservation</h2>
+    <input type="text" placeholder="First Name" id="firstName"/>
+    <input type="text" placeholder="Last Name" id="lastName"/>
+    <select id='school'>
+      <option value='none'>School</option>
+      <option value='QRS'>Quaker Ridge Elementary School</option>
+      <option value='GA'>Green Acres Elementary School</option>
+      <option value='HC'>Heathcote Elementary School</option>
+      <option value='FM'>Fox Meadow Elementary School</option>
+      <option value="EW">Edgewood Elementary School</option>
+      <option value="SMS">Scarsdale Middle School</option>
+      <option value="SHS">Scarsdale High School</option>
+    </select>
+    <select id='bus'>
+      <option value='none'>Bus Number</option>
+      <option value=000>000</option>
+      <option value=001>001</option>
+      <option value=002>002</option>
+      <option value=003>003</option>
+      <option value=004>004</option>
+      <option value=005>005</option>
+      <option value=006>006</option>
+    </select>
+    <select id='time'>
+      <option value='none'>Time</option>
+      <option value='AM'>AM</option>
+      <option value='PM'>PM</option>
+    </select>
+    <button id='reserve' onclick='reserve()'>Reserve</button>
+    <a href='/reservation'><button>Exit</button></a>
+    <h6></h6>
+  </div>
+</body>
+</html>

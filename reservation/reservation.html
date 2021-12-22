@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.7">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="reservationClient.js"></script>
+  <link rel="stylesheet" type="text/css" href="./reservationStyle.css"/>
+  <title>Reserve A Spot</title>
+</head>
+<body>
+  <div id="menu-bar">
+    <button id="menu-collapse" onclick="showMenuBar()">
+      <span id="menu-icon"></span>
+      <span id="menu-icon"></span>
+      <span id="menu-icon"></span>
+    </button>
+    <ul id="menu-items">
+      <a href="/"><li>Home</li></a>
+      <li><b><u>Bus Reservations</u></b></li>
+      <a href="/busdriver/login"><li>Bus Driver Login</li></a>
+      <a href="/weather"><li>Scarsdale Weather</li></a>
+    </ul>
+  </div>
+  <button id='logout' onclick='logout()'>Log Out</button>
+  <a href='/reservation/resetpassword'><button id='resetPassword'>Reset Password</button></a>
+
+  <h2>Current Reservations</h2>
+  <table id='busReservations'>
+    <tr id='reservationHeader'>
+      <th id='name'>Name</th>
+      <th id='school'>School</th>
+      <th id='bus'>Bus</th>
+      <th id='time'>Time</th>
+      <th id='cancel'>Cancel</th>
+    </tr>
+    <tr id='newReservation'>
+      <td colspan='5'><a href='/reservation/newreservation'><button id='addReservation'>Add Reservation</button></a></td>
+    </tr>
+  </table>
+</body>
+</html>

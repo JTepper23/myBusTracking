@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.7">
+  <link rel="stylesheet" type="text/css" href="/busDriverLoginStyle.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/busDriverLogin.js"></script>
+  <title>Login</title>
+</head>
+<body>
+  <div id="passwordField">
+    <h3 id="passwordText">Please enter the password:</h3>
+    <div id="passwordInformation">
+      <input type=text id="passwordEntry"/>
+      <button id="passwordSubmit" onclick="submitPassword()">Submit</button>
+    </div>
+  </div>
+
+  <div id="menu-bar">
+    <button id="menu-collapse" onclick="showMenuBar()">
+      <span id="menu-icon"></span>
+      <span id="menu-icon"></span>
+      <span id="menu-icon"></span>
+    </button>
+    <ul id="menu-items">
+      <a href="/"><li>Home</li></a>
+      <a href="/reservation/login"><li>Bus Reservations</li></a>
+      <li><b><u>Bus Driver Login</u></b></li>
+      <a href="/weather"><li>Scarsdale Weather</li></a>
+    </ul>
+  </div>
+</body>
+</html>
