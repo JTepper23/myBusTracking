@@ -7,8 +7,8 @@ class sqlHandler {
     this.con = mysql.createConnection({
       host: 'localhost',
       user: 'Client',
-      password: '08161718Kitty@',
-      database: 'myscarsdaleschoolbus'
+      password: '*password*',
+      database: '*database*'
     });
 
     this.con.connect((err) => {
