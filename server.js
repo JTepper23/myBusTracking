@@ -36,8 +36,8 @@ httpRouter.get('*', (req, res) => {
 const httpsRouter = express();
 
 const options = {
-  key: fs.readFileSync('C:/Users/jaden/Desktop/SSL keys/myscarsdaleschoolbus.com/665e600c76d713a3c9362f119614c1b8b9b243e7.key'),
-  cert: fs.readFileSync('C:/Users/jaden/Desktop/SSL keys/myscarsdaleschoolbus.com/myscarsdaleschoolbus_com.chained.crt')
+  key: fs.readFileSync({path}),
+  cert: fs.readFileSync({path})
 };
 
 const httpsServer = https.createServer(options, httpsRouter);
